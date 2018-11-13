@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>user List</title>
+</head>
+<body>
+    <h2>user list</h2>
+    <div>
+        <ui>
+            <li th:each="user:${users}">
+                <span th:text="${user.id}"></span>--
+                <span th:text="${user.name}"></span>--
+                <span th:text="${user.age}"></span>--
+                <span th:text="${user.address}"></span>
+            </li>
+        </ui>
+    </div>
+</body>
+</html>
