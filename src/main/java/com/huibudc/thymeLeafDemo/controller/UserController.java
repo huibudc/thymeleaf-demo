@@ -14,7 +14,6 @@ import java.util.List;
 public class UserController {
     @RequestMapping("/{id}")
     public String getUser(@PathVariable int id, Model model) {
-
         model.addAttribute("user", new User(id, "张三", 20, "中国广州"));
         return "/user/detail";
     }
