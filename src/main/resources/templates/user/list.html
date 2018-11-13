@@ -7,15 +7,19 @@
 </head>
 <body>
     <h2>user list</h2>
-    <div>
-        <ui>
-            <li th:each="user:${users}">
-                <span th:text="${user.id}"></span>--
-                <span th:text="${user.name}"></span>--
-                <span th:text="${user.age}"></span>--
-                <span th:text="${user.address}"></span>
-            </li>
-        </ui>
+    <div id="app-userList">
+        <span v-for="user in users">
+             {{user.id}}--{{user.name}}--{{user.age}}--{{user.address}}
+            <br>
+        </span>
     </div>
+<script th:inline="javascript">
+    new Vue({
+        el: '#app-userList',
+        data: {
+            users: /*[[${users}]]*/ []
+        }
+    });
+</script>
 </body>
 </html>
