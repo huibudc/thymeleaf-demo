@@ -27,4 +27,9 @@ public class UserController {
         model.addAttribute("users", userList);
         return "/user/list";
     }
+
+    @RequestMapping("/lists")
+    public String listUserNew() {
+        return "/user/new/list";
+    }
 }
